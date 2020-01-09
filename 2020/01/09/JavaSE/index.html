@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>JavaSE | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Java SE总结复习寒假复习第一阶段：javase的复习—基础重中之重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE">
+<meta property="og:url" content="http://yoursite.com/2020/01/09/JavaSE/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Java SE总结复习寒假复习第一阶段：javase的复习—基础重中之重">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/java%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/jdk%E3%80%81jre%E5%92%8Cjvm%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/master/JavaSE/Java%E5%8F%98%E9%87%8F%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/master/JavaSE/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.png">
+<meta property="article:published_time" content="2020-01-09T11:24:47.349Z">
+<meta property="article:modified_time" content="2020-01-09T14:02:26.144Z">
 <meta property="article:author" content="aimerrhythms">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/java%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png">
   
   
     <link rel="icon" href="/img/touxiang.jpg">
@@ -144,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JavaSE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JavaSE" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/09/JavaSE/">JavaSE</a>
+    <h1 class="article-title" itemprop="name">
+      JavaSE
     </h1>
   
 
@@ -168,7 +176,42 @@
       
         <hr>
 <h2 id="Java-SE总结复习"><a href="#Java-SE总结复习" class="headerlink" title="Java SE总结复习"></a>Java SE总结复习</h2><p>寒假复习第一阶段：javase的复习—基础重中之重</p>
-        
+<a id="more"></a>
+
+<h3 id="一、JAVA快速入门"><a href="#一、JAVA快速入门" class="headerlink" title="一、JAVA快速入门"></a>一、JAVA快速入门</h3><h4 id="1-1、JAVA入门程序"><a href="#1-1、JAVA入门程序" class="headerlink" title="1.1、JAVA入门程序"></a>1.1、JAVA入门程序</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        System.out.println(<span class="string">"hello java"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2、JAVA程序的运行机制"><a href="#1-2、JAVA程序的运行机制" class="headerlink" title="1.2、JAVA程序的运行机制"></a>1.2、JAVA程序的运行机制</h4><p><img src="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/java%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.png" alt=""></p>
+<ol>
+<li>编写好的Java源程序(.java)经过Java编译器编译成<strong>与平台无关</strong>的字节码文件(.class);  </li>
+<li>字节码文件由JRE解释执行  </li>
+</ol>
+<h4 id="1-3、JDK-和-JRE-和-JVM-的作用和区别"><a href="#1-3、JDK-和-JRE-和-JVM-的作用和区别" class="headerlink" title="1.3、JDK 和 JRE 和 JVM 的作用和区别"></a>1.3、JDK 和 JRE 和 JVM 的作用和区别</h4><h4 id="1-3-4、JDK-Java-SE-Development-Kit"><a href="#1-3-4、JDK-Java-SE-Development-Kit" class="headerlink" title="1.3.4、JDK(Java SE Development Kit)"></a>1.3.4、JDK(Java SE Development Kit)</h4><p>&#160; &#160; &#160; &#160;Java标准开发包。它提供了编译、运行Java程序所需的各种工具和资源，包括编译器、Java运行环境及常用的Java类库；  </p>
+<h4 id="1-3-4、JRE-Java-Runtime-Environment"><a href="#1-3-4、JRE-Java-Runtime-Environment" class="headerlink" title="1.3.4、JRE(Java Runtime Environment)"></a>1.3.4、JRE(Java Runtime Environment)</h4><p>&#160; &#160; &#160; &#160;Java运行环境。用于解释执行Java的字节码文件。普通用户只需要安装JRE用来运行Java环境。而开发人员需要安装JDK来编译、调试程</p>
+<h4 id="1-3-4、JVM-Java-Virtual-Mechinal"><a href="#1-3-4、JVM-Java-Virtual-Mechinal" class="headerlink" title="1.3.4、JVM(Java Virtual Mechinal)"></a>1.3.4、JVM(Java Virtual Mechinal)</h4><p>&#160; &#160; &#160; &#160;Java虚拟机，是JRE的一部分。它是实现整个Java跨平台特性的最核心部分，是可运行Java字节码文件的虚拟计算机。所有平台上的JVM只需要向编译器提供相同的接口，而编译器只需要面向JVM生成能识别的代码，然后由虚拟机来解释执行。  </p>
+<h4 id="1-3-4、三者的区别和联系"><a href="#1-3-4、三者的区别和联系" class="headerlink" title="1.3.4、三者的区别和联系"></a>1.3.4、三者的区别和联系</h4><ol>
+<li>区别<br>JDK用于开发<br>JRE用于运行Java程序  </li>
+<li>联系<br>JDK包含JRE，JDK和JRE都包含JVM<br><img src="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/jdk%E3%80%81jre%E5%92%8Cjvm%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB.png" alt="avatar"></li>
+</ol>
+<h3 id="二、JAVA基础深化和提高"><a href="#二、JAVA基础深化和提高" class="headerlink" title="二、JAVA基础深化和提高"></a>二、JAVA基础深化和提高</h3><h4 id="2-1、Java数据类型和运算符"><a href="#2-1、Java数据类型和运算符" class="headerlink" title="2.1、Java数据类型和运算符"></a>2.1、Java数据类型和运算符</h4><h4 id="2-1-1、Java变量的分类"><a href="#2-1-1、Java变量的分类" class="headerlink" title="2.1.1、Java变量的分类"></a>2.1.1、Java变量的分类</h4><p><img src="https://raw.githubusercontent.com/chenxi1025/blog_photos/master/JavaSE/Java%E5%8F%98%E9%87%8F%E5%88%86%E7%B1%BB.png" alt="avatar"></p>
+<h4 id="2-1-2、Java基本数据类型和数据类型转换"><a href="#2-1-2、Java基本数据类型和数据类型转换" class="headerlink" title="2.1.2、Java基本数据类型和数据类型转换"></a>2.1.2、Java基本数据类型和数据类型转换</h4><ol>
+<li>Java基本数据类型<br><img src="https://raw.githubusercontent.com/chenxi1025/blog_photos/master/JavaSE/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" alt="avatar"></li>
+<li>自动类型转换<br><img src="https://raw.githubusercontent.com/chenxi1025/blog_photos/d30f5e976918cf46b2697f148fe7b5a25b27be0e/JavaSE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.png" alt="avatar"><br>1）两种类型是彼此兼容的<br>2）目标类型取值范围大于被转化的源类型<br>3）<a href="https://blog.csdn.net/qq_31778159/article/details/79284113" target="_blank" rel="noopener">int转float发生精度丢失，而int转double不出现精度丢失</a></li>
+<li>强制类型转换<br>将容纳更多信息的数据类型转换成一个容量更小的数据类型，可能存在精度损失的风险</li>
+</ol>
+<h4 id="2-1-3、Java中BigDecimal类的使用"><a href="#2-1-3、Java中BigDecimal类的使用" class="headerlink" title="2.1.3、Java中BigDecimal类的使用"></a>2.1.3、Java中BigDecimal类的使用</h4><ol>
+<li>BigDecimal常用于商业计算中</li>
+<li>创建BigDecimal对象的方法  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//构造方法</span><br><span class="line">BigDecimal(String str);  //常用</span><br><span class="line">BigDecimal(double d);</span><br><span class="line">//类方法</span><br><span class="line">BigDecimal.valueOf(double d);  //常用</span><br></pre></td></tr></table></figure></li>
+<li>成员方法<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public BigDecimal add(BigDecimal num);//加</span><br><span class="line">public BigDecimal subtract(BigDecimal num);//减</span><br><span class="line">public BigDecimal multiply(BigDecimal num);//乘</span><br><span class="line">public BigDecimal divide(BigDecimal num);//除</span><br><span class="line">public boolean compareTo(BigDecimal bd2);//比较</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="comment">#### 2.1.4、String类的方法(2345)</span></span><br><span class="line">第一组：其他方法</span><br><span class="line">```bash</span><br><span class="line">String trim();  //去掉字符串两端的空格</span><br><span class="line">String[] split(String str);  //以str为分割符进行切割，返回字符串数组</span><br><span class="line">```  </span><br><span class="line">第二组：转换方法</span><br><span class="line">```bash</span><br><span class="line">String toLowerCase();  //变小写</span><br><span class="line">String toUpperCase();  //变大写</span><br><span class="line">Char[] toCharArray();  //变字符数组</span><br><span class="line">```  </span><br><span class="line">第三组：判断方法</span><br><span class="line">```bash</span><br><span class="line">boolean equals(String str);</span><br><span class="line">boolean equalsIgnoreCase(String str);</span><br><span class="line">boolean startsWith(String str);</span><br><span class="line">boolean endsWith(String str);</span><br><span class="line">```  </span><br><span class="line">第四组：获取方法</span><br><span class="line">```bash</span><br><span class="line">int length();</span><br><span class="line">char charAt(int index);</span><br><span class="line">String substring(int startIndex);</span><br><span class="line">String substring(int startIndex, int endIndex);</span><br><span class="line">int indexOf(String str);</span><br></pre></td></tr></table></figure>
+<h4 id="2-2、控制语句"><a href="#2-2、控制语句" class="headerlink" title="2.2、控制语句"></a>2.2、控制语句</h4>选择、循环、switch<h4 id="2-3、面向对象"><a href="#2-3、面向对象" class="headerlink" title="2.3、面向对象"></a>2.3、面向对象</h4>面向过程：遇到问题，亲力亲为，一步一步解决问题<br>面向对象：遇到问题，寻找具有解决问题的能力的对象</li>
+<li>面向对象的三大特性：封装、继承、多态</li>
+<li>方法的重载(overload):<strong>形参</strong>类型、个数和顺序不同</li>
+<li>面向对象内存分析(读懂，到jvm的时候深入学习)</li>
+<li>this关键字：this不能用于static方法中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">作用：</span><br><span class="line">    1、区分局部变量和全局变量同名的情况</span><br><span class="line">    2、this(args); 调用重载的构造方法，必须位于第一行</span><br><span class="line">this的本质：</span><br><span class="line">    this实质上是一个对象，即this指的是当前对象</span><br></pre></td></tr></table></figure></li>
+<li>匿名对象：只创建，不用变量接收</li>
+<li>继承<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用：</span><br><span class="line">    提高代码的复用性</span><br><span class="line">特点：</span><br><span class="line">    1、父类定义了继承树中的共性内容，子类定义了个性   内容</span><br><span class="line">    2、两个类之间的关系</span><br><span class="line">    3、java单继承</span><br><span class="line">    4、子类拥有父类所有的东西，private的除外</span><br><span class="line">    5、子父类成员变量或方法同名：优先调用子类自己的</span><br></pre></td></tr></table></figure>
+<h3 id="数据库编程和设计"><a href="#数据库编程和设计" class="headerlink" title="数据库编程和设计"></a>数据库编程和设计</h3><h3 id="网页编程和设计"><a href="#网页编程和设计" class="headerlink" title="网页编程和设计"></a>网页编程和设计</h3><h3 id="JAVAEE和项目开发"><a href="#JAVAEE和项目开发" class="headerlink" title="JAVAEE和项目开发"></a>JAVAEE和项目开发</h3><h3 id="SSM框架和项目开发"><a href="#SSM框架和项目开发" class="headerlink" title="SSM框架和项目开发"></a>SSM框架和项目开发</h3><h3 id="JAVA高级技术"><a href="#JAVA高级技术" class="headerlink" title="JAVA高级技术"></a>JAVA高级技术</h3></li>
+</ol>
+
       
 
       
@@ -179,16 +222,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/09/JavaSE/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -203,76 +254,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/09/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-09T07:09:33.748Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/09/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-SE总结复习"><span class="toc-number">1.</span> <span class="toc-text">Java SE总结复习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、JAVA快速入门"><span class="toc-number">1.1.</span> <span class="toc-text">一、JAVA快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、JAVA入门程序"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、JAVA入门程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、JAVA程序的运行机制"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、JAVA程序的运行机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、JDK-和-JRE-和-JVM-的作用和区别"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、JDK 和 JRE 和 JVM 的作用和区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-4、JDK-Java-SE-Development-Kit"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.3.4、JDK(Java SE Development Kit)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-4、JRE-Java-Runtime-Environment"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.3.4、JRE(Java Runtime Environment)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-4、JVM-Java-Virtual-Mechinal"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.3.4、JVM(Java Virtual Mechinal)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-4、三者的区别和联系"><span class="toc-number">1.1.7.</span> <span class="toc-text">1.3.4、三者的区别和联系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、JAVA基础深化和提高"><span class="toc-number">1.2.</span> <span class="toc-text">二、JAVA基础深化和提高</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、Java数据类型和运算符"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1、Java数据类型和运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1、Java变量的分类"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.1.1、Java变量的分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2、Java基本数据类型和数据类型转换"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.1.2、Java基本数据类型和数据类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3、Java中BigDecimal类的使用"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.1.3、Java中BigDecimal类的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、控制语句"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.2、控制语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3、面向对象"><span class="toc-number">1.2.6.</span> <span class="toc-text">2.3、面向对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库编程和设计"><span class="toc-number">1.3.</span> <span class="toc-text">数据库编程和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页编程和设计"><span class="toc-number">1.4.</span> <span class="toc-text">网页编程和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVAEE和项目开发"><span class="toc-number">1.5.</span> <span class="toc-text">JAVAEE和项目开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSM框架和项目开发"><span class="toc-number">1.6.</span> <span class="toc-text">SSM框架和项目开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVA高级技术"><span class="toc-number">1.7.</span> <span class="toc-text">JAVA高级技术</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -292,8 +299,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
